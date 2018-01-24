@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_144"/>
+	<classpathentry kind="lib" path="libs/ibatis-dao-2.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/ibatis-sqlmap-2.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/ibatis2-common-2.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="libs/ojdbc5.jar"/>
+	<classpathentry kind="lib" path="libs/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/commons-pool-1.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

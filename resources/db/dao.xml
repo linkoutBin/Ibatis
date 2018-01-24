@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!DOCTYPE daoConfig
+    PUBLIC "-//ibatis.apache.org//DTD DAO Configuration 2.0//EN"
+    "http://ibatis.apache.org/dtd/dao-2.dtd">
+
+<daoConfig>
+
+	<context>
+
+		<transactionManager type="SQLMAP">
+			<property name="SqlMapConfigResource"
+				value="db/SqlMapConfig.xml" />
+		</transactionManager>
+			
+		<dao implementation="com.bin.dao.impl.DaoImpl" interface="com.bin.dao.Dao"/>
+    </context>
+	
+</daoConfig>
+

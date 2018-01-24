@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties resource="jdbc-common.properties" />
+	<settings useStatementNamespaces="true" cacheModelsEnabled="true"
+		enhancementEnabled="true" lazyLoadingEnabled="true" />
+	<transactionManager type="JDBC">
+		<!-- <dataSource  type="com.umpay.jdbc.UmpayCPDataSource">
+			<property name="jdbc.driver" value="${jdbc.driver}" />
+			<property name="jdbc.url" value="${jdbc.url}" />
+			<property name="jdbc.username" value="${jdbc.username}" />
+			<property name="jdbc.password" value="${jdbc.password}" />
+			<property name="jdbc.min_connections" value="${jdbc.min_connections}" />
+			<property name="jdbc.max_connections" value="${jdbc.max_connections}" />
+			<property name="jdbc.max_statements" value="${jdbc.max_statements}" />
+			<property name="jdbc.max_prestatements" value="${jdbc.max_prestatements}" />
+			<property name="jdbc.checkout_timeout" value="${jdbc.checkout_timeout}" />
+			<property name="jdbc.idle_timeout" value="${jdbc.idle_timeout}" />
+			<property name="jdbc.check_statement}" value="${jdbc.check_statement}" />
+			<property name="jdbc.jmx_level" value="${jdbc.jmx_level}"/>
+			<property name="jdbc.verbose" value="${jdbc.verbose}"/>
+			<property name="jdbc.printSQL" value="${jdbc.printSQL}"/>
+		</dataSource>  -->
+		
+		<!-- <dataSource type="org.apache.commons.dbcp.BasicDataSource">
+			<property name="driverClassName" value="${jdbc.driver}"/>  
+	        <property name="url" value="${jdbc.url}"/>  
+	        <property name="username" value="${jdbc.username}"/>  
+	        <property name="password" value="${jdbc.password}"/>  
+	        <property name="maxActive" value="${jdbc.max_connections}"/>  
+	        <property name="minIdle" value="${jdbc.min_connections}"/>  
+	        <property name="maxIdle" value="2"/>  
+	        <property name="initialSize" value="1"/>  
+	        <property name="logAbandoned" value="true"/>  
+	        <property name="removeAbandoned"  value="true"/>  
+	        <property name="removeAbandonedTimeout" value="10"/>  
+	        <property name="maxWait" value="1000"/>  
+	        <property name="timeBetweenEvictionRunsMillis" value="10000"/>  
+	        <property name="numTestsPerEvictionRun" value="10"/>  
+	        <property name="minEvictableIdleTimeMillis" value="10000"/>  
+	    	<property name="validationQuery" value="SELECT NOW() FROM DUAL"/>
+		</dataSource> -->
+		
+		<!-- <dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="${jdbc.driver}"/>
+			<property name="JDBC.ConnectionURL" value="${jdbc.url}"/>
+			<property name="JDBC.Username" value="${jdbc.username}"/>
+			<property name="JDBC.Password" value="${jdbc.password}"/>
+		</dataSource> -->
+		
+		<dataSource type="DBCP">
+			<property name="JDBC.Driver" value="${jdbc.driver}"/>
+			<property name="JDBC.ConnectionURL" value="${jdbc.url}"/>
+			<property name="JDBC.Username" value="${jdbc.username}"/>
+			<property name="JDBC.Password" value="${jdbc.password}"/>
+			<property name="Pool.MaximumActiveConnections" value="15"/>
+			<property name="Pool.MaximumIdleConnections" value="15"/>
+			<property name="Pool.MaximumWait" value="1000"/>
+		</dataSource>
+		
+	</transactionManager>
+    <sqlMap resource="sqlmap/T_SqlMap.xml"/>
+</sqlMapConfig>
+
+
+
+
+
+
+
+
+
